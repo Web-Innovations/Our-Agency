@@ -1424,10 +1424,10 @@ document.addEventListener('mousemove', (e) => {
         const distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
 
         // Define the strength of the repulsion effect
-        const repelStrength = 800;
+        const repelStrength = 0;
 
         // Define the maximum distance within which the repel effect will be active
-        const maxRepelDistance = 500;
+        const maxRepelDistance = 0;
 
         // If the mouse is within the maximum repel distance, apply the repel effect
         if (distance < maxRepelDistance) {
