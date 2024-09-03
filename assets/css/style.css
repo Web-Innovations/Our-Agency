@@ -228,11 +228,11 @@ figure {
 }
 
 .main-color {
-  color: #14cf93 !important;
+  color: #1ed760 !important;
 }
 
 .main-colorbg {
-  background: #14cf93 !important;
+  background: #1ed760 !important;
 }
 
 .main-color2 {
@@ -570,7 +570,7 @@ figure {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: #14cf93;
+  background: #1ed760;
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
@@ -580,7 +580,7 @@ figure {
 }
 
 .btn-circle:hover {
-  border-color: #14cf93;
+  border-color: #1ed760;
 }
 
 .btn-circle:hover:after {
@@ -1989,7 +1989,7 @@ img.left {
 }
 
 .fz-70 {
-  font-size: 70px !important;
+  font-size: 60px !important;
 }
 
 .fz-80 {
@@ -2058,7 +2058,7 @@ img.left {
 }
 
 .line-height-45 {
-  line-height: 45px;
+  line-height: 40px;
 }
 
 .line-height-50 {
@@ -2295,7 +2295,7 @@ img.left {
 }
 
 .mt-100 {
-  margin-top: 100px !important;
+  margin-top: 70px !important;
 }
 
 .mt-120 {
@@ -2572,7 +2572,8 @@ img.left {
 }
 
 .ml-80 {
-  margin-left: 80px !important;
+  margin-left: 40px !important;
+  margin-right: 40px !important;
 }
 
 .ml-85 {
@@ -2658,7 +2659,7 @@ img.left {
       padding-top  (0/100) +5
 -------------------------------------------------------*/
 .pt-0 {
-  padding-top: 0 !important;
+  padding-top: 140px !important;
 }
 
 .pt-5 {
@@ -4379,11 +4380,11 @@ body.loaded {
 }
 
 .blog-list-half .item .cont .tags a:hover {
-  background: #14cf93;
+  background: #1ed760;
 }
 
 .blog-list-half .item .cont .tags.colorbg a:hover {
-  background: #14cf93;
+  background: #1ed760;
   color: #1a1a1a;
 }
 
@@ -4472,7 +4473,7 @@ body.loaded {
 .blog-list-crev .item .background .more a {
   font-size: 14px;
   padding: 14px 35px;
-  background: #14cf93;
+  background: #1ed760;
   border-radius: 30px;
 }
 
@@ -4637,7 +4638,7 @@ body.loaded {
 }
 
 .sidebar .widget.tags a:hover {
-  background: #14cf93;
+  background: #1ed760;
 }
 
 .blog-main .item .content {
@@ -4759,7 +4760,7 @@ body.loaded {
 
 .main-post .info-area .tags a:hover,
 .main-post .info-area .share-icon a:hover {
-  background: #14cf93;
+  background: #1ed760;
   color: #1d1d1d;
 }
 
@@ -4979,9 +4980,9 @@ body.loaded {
   left: 35px;
   right: 35px;
   bottom: 35px;
-  background: -webkit-linear-gradient(320deg, transparent, #14cf93);
-  background: -o-linear-gradient(320deg, transparent, #14cf93);
-  background: linear-gradient(130deg, transparent, #14cf93);
+  background: -webkit-linear-gradient(320deg, transparent, #1ed760);
+  background: -o-linear-gradient(320deg, transparent, #1ed760);
+  background: linear-gradient(130deg, transparent, #1ed760);
   opacity: 0;
   -webkit-transition: all .4s;
   -o-transition: all .4s;
@@ -5483,7 +5484,7 @@ body.loaded {
 }
 
 .social-icon-circle a:hover {
-  color: #14cf93;
+  color: #1ed760;
 }
 
 .google-map {
@@ -6013,7 +6014,7 @@ footer.clean-footer.crev:before {
   width: 3px;
   height: 3px;
   border-radius: 50%;
-  background: #14cf93;
+  background: #1ed760;
 }
 
 .page-header-error {
@@ -6762,7 +6763,7 @@ footer.clean-footer.crev:before {
   position: absolute;
   width: 20px;
   height: 100px;
-  background: #14cf93;
+  background: #1ed760;
   opacity: 0;
   -webkit-transition: all .4s;
   -o-transition: all .4s;
@@ -7594,7 +7595,7 @@ footer.clean-footer.crev:before {
 }
 
 .services .item-box2 .rmore:hover .arrow {
-  background: #14cf93;
+  background: #1ed760;
 }
 
 .services .item-box2 .rmore .arrow {
@@ -8590,8 +8591,8 @@ footer.clean-footer.crev:before {
 }
 
 .team .item .social .links a:hover {
-  background: #14cf93;
-  border-color: #14cf93;
+  background: #1ed760;
+  border-color: #1ed760;
   color: #111;
 }
 
@@ -8706,7 +8707,7 @@ footer.clean-footer.crev:before {
   position: absolute;
   width: 20px;
   height: 100px;
-  background: #14cf93;
+  background: #1ed760;
   opacity: 0;
   -webkit-transition: all .4s;
   -o-transition: all .4s;
@@ -8762,7 +8763,7 @@ footer.clean-footer.crev:before {
   width: 0;
   top: 0;
   left: 0;
-  background-color: #14cf93;
+  background-color: #1ed760;
   -webkit-transition: all 1.5s;
   -o-transition: all 1.5s;
   transition: all 1.5s;
@@ -8809,7 +8810,7 @@ footer.clean-footer.crev:before {
   line-height: 45px;
   text-align: center;
   border-radius: 0 50px 50px 50px;
-  background: #14cf93;
+  background: #1ed760;
   color: #1a1a1a;
   font-size: 17px;
   font-weight: 500;
@@ -8862,6 +8863,7 @@ footer.clean-footer.crev:before {
   left: -40px;
   top: -70px;
   width: 160px;
+  opacity: 15% !important;
 }
 
 .testimonials .item .circle {
@@ -10259,17 +10261,16 @@ footer.clean-footer.crev:before {
   padding: 15px !important;
 }
 }
-@media screen and (max-width: 1024px) and (min-width: 370px) {
-.cursor {
-
-  display: none !important;
-}
-}
 @media screen and (max-width: 360px) and (min-width: 350px) {
   .navbar.nav-crev {
   
     padding: 6px !important;
   }
   }
-
+  .clients-carso {
+    padding-bottom: 0px !important;
+  }
+  .blog-list-half{
+    padding-bottom: 0px !important;
+  }
 /* ====================== [ End Responsive ] ====================== */
