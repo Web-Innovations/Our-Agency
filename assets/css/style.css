@@ -7794,6 +7794,7 @@ footer.clean-footer.crev:before {
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.01);
   position: relative;
+  border-radius: 15px !important;
 }
 
 .services-crev .item-box .num {
