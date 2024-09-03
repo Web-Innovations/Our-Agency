@@ -30,6 +30,7 @@
 
     <!-- Core Style Css -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
 </head>
 
@@ -658,7 +659,7 @@
                         <div class="col-lg-4">
                             <div class="sec-head">
                                 <h6 class="sub-title main-color mb-15">Testimonials</h6>
-                                <h3 class="fw-600">What Our Clients Are <span class="fw-200">Saying</span></h3>
+                                <h3 class="fw-600">What Our Clients Are <span class="fw-200">Saying</span></h3><br>
                                 <p>In today’s digital world, nothing speaks louder than the voice of our clients. At Atsaran Web Innovations, we’re proud to have partnered with visionary businesses that trust us to bring their digital dreams to life. But don’t just take our word for it—hear what they have to say:</p>
                             </div>
                         </div>
@@ -1181,6 +1182,26 @@
 
 <!-- custom scripts -->
 <script src="assets/js/scripts.js"></script>
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var swiper = new Swiper('#content-carousel-container-unq-testim', {
+            loop: true, // Enable looping
+            spaceBetween: 30, // Space between slides
+            autoplay: {
+                delay: 3000, // 3 seconds delay between slides
+                disableOnInteraction: false, // Keep autoplay running after interaction
+            },
+            navigation: {
+                nextEl: '.swiper-button-next', // Navigation button for next slide
+                prevEl: '.swiper-button-prev', // Navigation button for previous slide
+            },
+        });
+    });
+</script>
+
 
 </body>
 
