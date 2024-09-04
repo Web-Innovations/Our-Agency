@@ -10262,6 +10262,12 @@ footer.clean-footer.crev:before {
   padding: 15px !important;
 }
 }
+@media screen and (max-width: 1024px) and (min-width: 370px) {
+  .cursor {
+  
+    display: none I !important;
+  }
+  }
 @media screen and (max-width: 360px) and (min-width: 350px) {
   .navbar.nav-crev {
   
