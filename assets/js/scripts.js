@@ -831,7 +831,7 @@ $(window).on("load", function () {
 
     $('#contact-form').on('submit', function (e) {
         if (!e.isDefaultPrevented()) {
-            var url = "contact.php";
+            var url = "https://script.google.com/macros/s/AKfycbzLpTvhzY_jrE9kOUMpE9phfYG5DG2HL0bD7Ens3Bf7lzcs7Eab0kDtJQGbJtOofG2X/exec";
 
             $.ajax({
                 type: "POST",
