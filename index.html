@@ -1038,6 +1038,8 @@
                                                     <span class="text">Let's Talk</span>
                                                 </button>
                                             </div>
+                                            <!-- Place for displaying success or error message -->
+<div id="responseMessage" style="display:none;"></div>
                                         </div>
 
                                     </div>
@@ -1180,38 +1182,7 @@
 
 </div>
 
-<!-- Inline JavaScript goes here -->
-<script>
-    document.getElementById("myForm").addEventListener("submit", function(event) {
-        event.preventDefault();
-    
-        fetch("your-google-sheet-url", {
-            method: "POST",
-            body: new FormData(document.getElementById("myForm")),
-        })
-        .then(response => {
-            if (response.ok) {
-                showMessage("Form submitted successfully!", true);
-            } else {
-                showMessage("Error submitting the form. Please try again later.", false);
-            }
-        })
-        .catch(error => {
-            showMessage("An error occurred: " + error.message, false);
-        });
-    });
-    
-    function showMessage(message, isSuccess) {
-        const messageDiv = document.getElementById("responseMessage");
-        messageDiv.style.display = "block";
-        messageDiv.style.color = isSuccess ? "green" : "red";
-        messageDiv.innerHTML = message;
-    
-        setTimeout(() => {
-            window.location.reload();
-        }, 3000);
-    }
-    </script>
+
 
 <!-- jQuery -->
 <script src="assets/js/jquery-3.6.0.min.js"></script>
@@ -1246,6 +1217,43 @@
         });
     });
 </script>
+<script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the form's default submission behavior
+    
+        // Send the form data to the Google Apps Script Web App
+        fetch("https://script.google.com/macros/s/AKfycbzLpTvhzY_jrE9kOUMpE9phfYG5DG2HL0bD7Ens3Bf7lzcs7Eab0kDtJQGbJtOofG2X/exec", {
+            method: "POST",
+            body: new FormData(document.getElementById("myForm")),
+        })
+        .then(response => response.json())  // Parse the JSON response
+        .then(data => {
+            if (data.result === "success") {
+                // Show success message
+                showMessage(data.message, true);
+            } else {
+                // Show error message
+                showMessage("Error submitting the form. Please try again.", false);
+            }
+        })
+        .catch(error => {
+            // Show an error message if the fetch fails
+            showMessage("An error occurred: " + error.message, false);
+        });
+    });
+    
+    function showMessage(message, isSuccess) {
+        const messageDiv = document.getElementById("responseMessage");
+        messageDiv.style.display = "block";
+        messageDiv.style.color = isSuccess ? "green" : "red";
+        messageDiv.innerHTML = message;
+    
+        // Refresh the page after showing the message
+        setTimeout(() => {
+            window.location.reload();
+        }, 3000); // 3 seconds delay before refresh
+    }
+    </script>
 
 
 </body>
