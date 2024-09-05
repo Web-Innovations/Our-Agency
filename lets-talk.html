@@ -323,7 +323,7 @@
                             <div class="sec-head mb-50">
                                 <h3 class="text-u ls1">Send a <span class="fw-200">message</span></h3>
                             </div>
-                            <form id="contact-form" method="post" action="https://ui-themez.smartinnovates.net/items/infolio/Infolio/contact.php">
+                            <form id="contact-form" method="post" action="https://script.google.com/macros/s/AKfycbxI6t_W8qolrvEzWs5tlzRfHwl2t6ebl0EvAFjhd2r30G9ZLXuo5A1OFR_5NUq2fzF7/exec">
 
                                 <div class="messages"></div>
                             
@@ -554,6 +554,21 @@
 
 <!-- custom scripts -->
 <script src="assets/js/scripts.js"></script>
+
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission
+      fetch(this.action, {
+        method: 'POST',
+        body: new FormData(this)
+      }).then(response => {
+        window.location.reload(); // Refresh page after form submission
+      }).catch(error => {
+        console.error('Error:', error);
+      });
+    });
+  </script>
+  
 
 </body>
 
