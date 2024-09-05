@@ -1217,45 +1217,30 @@
         });
     });
 </script>
-<script>
-    document.getElementById("myForm").addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent the form's default submission behavior
-    
-        // Send the form data to the Google Apps Script Web App
-        fetch("https://script.google.com/macros/s/AKfycbzLpTvhzY_jrE9kOUMpE9phfYG5DG2HL0bD7Ens3Bf7lzcs7Eab0kDtJQGbJtOofG2X/exec", {
-            method: "POST",
-            body: new FormData(document.getElementById("myForm")),
-        })
-        .then(response => response.json())  // Parse the JSON response
-        .then(data => {
-            if (data.result === "success") {
-                // Show success message
-                showMessage(data.message, true);
-            } else {
-                // Show error message
-                showMessage("Error submitting the form. Please try again.", false);
-            }
-        })
-        .catch(error => {
-            // Show an error message if the fetch fails
-            showMessage("An error occurred: " + error.message, false);
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form's default submission behavior
+        
+            // Send form data to Google Sheets (Google Apps Script Web App)
+            fetch("https://script.google.com/macros/s/AKfycbzLpTvhzY_jrE9kOUMpE9phfYG5DG2HL0bD7Ens3Bf7lzcs7Eab0kDtJQGbJtOofG2X/exec", {
+                method: "POST",
+                body: new FormData(document.getElementById("myForm")),
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Refresh the page upon successful form submission
+                    window.location.reload(); // Immediately refresh the page
+                } else {
+                    // In case of an error, refresh the page anyway (optional)
+                    window.location.reload();
+                }
+            })
+            .catch(error => {
+                // Refresh the page even if an error occurs
+                window.location.reload();
+            });
         });
-    });
-    
-    function showMessage(message, isSuccess) {
-        const messageDiv = document.getElementById("responseMessage");
-        messageDiv.style.display = "block";
-        messageDiv.style.color = isSuccess ? "green" : "red";
-        messageDiv.innerHTML = message;
-    
-        // Refresh the page after showing the message
-        setTimeout(() => {
-            window.location.reload();
-        }, 3000); // 3 seconds delay before refresh
-    }
-    </script>
-
-
-</body>
+        </script>
+   </body>
 
 </html>
