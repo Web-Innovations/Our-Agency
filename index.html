@@ -1180,6 +1180,39 @@
 
 </div>
 
+<!-- Inline JavaScript goes here -->
+<script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+    
+        fetch("your-google-sheet-url", {
+            method: "POST",
+            body: new FormData(document.getElementById("myForm")),
+        })
+        .then(response => {
+            if (response.ok) {
+                showMessage("Form submitted successfully!", true);
+            } else {
+                showMessage("Error submitting the form. Please try again later.", false);
+            }
+        })
+        .catch(error => {
+            showMessage("An error occurred: " + error.message, false);
+        });
+    });
+    
+    function showMessage(message, isSuccess) {
+        const messageDiv = document.getElementById("responseMessage");
+        messageDiv.style.display = "block";
+        messageDiv.style.color = isSuccess ? "green" : "red";
+        messageDiv.innerHTML = message;
+    
+        setTimeout(() => {
+            window.location.reload();
+        }, 3000);
+    }
+    </script>
+
 <!-- jQuery -->
 <script src="assets/js/jquery-3.6.0.min.js"></script>
 <script src="assets/js/jquery-migrate-3.4.0.min.js"></script>
