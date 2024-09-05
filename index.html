@@ -1217,30 +1217,19 @@
         });
     });
 </script>
-    <script>
-        document.getElementById("myForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent the form's default submission behavior
-        
-            // Send form data to Google Sheets (Google Apps Script Web App)
-            fetch("https://script.google.com/macros/s/AKfycbzLpTvhzY_jrE9kOUMpE9phfYG5DG2HL0bD7Ens3Bf7lzcs7Eab0kDtJQGbJtOofG2X/exec", {
-                method: "POST",
-                body: new FormData(document.getElementById("myForm")),
-            })
-            .then(response => {
-                if (response.ok) {
-                    // Refresh the page upon successful form submission
-                    window.location.reload(); // Immediately refresh the page
-                } else {
-                    // In case of an error, refresh the page anyway (optional)
-                    window.location.reload();
-                }
-            })
-            .catch(error => {
-                // Refresh the page even if an error occurs
-                window.location.reload();
-            });
-        });
-        </script>
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission
+      fetch(this.action, {
+        method: 'POST',
+        body: new FormData(this)
+      }).then(response => {
+        window.location.reload(); // Refresh page after form submission
+      }).catch(error => {
+        console.error('Error:', error);
+      });
+    });
+  </script>
    </body>
 
 </html>
