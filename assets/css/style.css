@@ -7532,6 +7532,7 @@ footer.clean-footer.crev:before {
 .services .item-box {
   padding: 60px 40px;
   border: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 30px !important;
 }
 
 .services .item-box .icon {
@@ -7796,6 +7797,7 @@ footer.clean-footer.crev:before {
   background: rgba(255, 255, 255, 0.01);
   position: relative;
   border-radius: 15px !important;
+  margin-bottom: 30px !important;
 }
 
 .services-crev .item-box .num {
