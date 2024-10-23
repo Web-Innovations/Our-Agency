@@ -8535,11 +8535,13 @@ footer .sub-footer .text-center {
     .navbar.nav-crev {
     padding: 15px !important;
 }
-}@media screen and (max-width:1024px) and (min-width:370px) {
+}
+@media screen and (max-width:1024px) and (min-width:370px) {
     .cursor {
     display: none I !important;
 }
-}@media screen and (max-width:360px) and (min-width:350px) {
+}
+@media screen and (max-width:360px) and (min-width:350px) {
     .navbar.nav-crev {
     padding: 6px !important;
 }
@@ -8577,4 +8579,9 @@ footer .sub-footer .text-center {
     right: 10px;
     font-size: 22px;
 }
+}
+@media screen and (max-width: 1024px) and (min-width: 370px) {
+    .cta p,.butn {
+        display: none !important;
+    }
 }
