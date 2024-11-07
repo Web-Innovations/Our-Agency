@@ -8581,7 +8581,12 @@ footer .sub-footer .text-center {
 }
 }
 @media screen and (max-width: 1024px) and (min-width: 370px) {
-    .cta p,.butn {
+    .cta .butn{
+        display: none !important;
+    }
+}
+@media screen and (max-width: 1024px) and (min-width: 370px) {
+    .cta p{
         display: none !important;
     }
 }
