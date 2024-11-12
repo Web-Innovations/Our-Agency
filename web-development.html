@@ -122,7 +122,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
-                        aria-haspopup="true" aria-expanded="false"><span class="rolling-text">Whar We Offer</span></a>
+                        aria-haspopup="true" aria-expanded="false"><span class="rolling-text">What We Offer</span></a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="web-development.html">Web Development</a>
                         <a class="dropdown-item" href="mobile-app-development.html">Mobile App Development</a>
@@ -206,7 +206,7 @@
                         <li>
                             <div class="o-hidden">
                                 <div class="link cursor-pointer dmenu"><span class="fill-text"
-                                        data-text="Whar We Offer">Whar We Offer</span> <i></i>
+                                        data-text="What We Offer">What We Offer</span> <i></i>
                                 </div>
                             </div>
                             <div class="sub-menu">
@@ -786,7 +786,7 @@
                         <div class="sec-head mb-50">
                             <h3 class="text-u ls1">Enquire <span class="fw-200">Now</span></h3>
                         </div>
-                        <form id="web-development-form" method="post" action="https://script.google.com/macros/s/AKfycbxP0P5zDqDL9zyms9k9dL6NWRf7YyTcYuuD55qEtPyH2FZbpL396ApgFiweB9cjSJt09w/exec">
+                        <form id="web-development-form" method="post" action="https://script.google.com/macros/s/AKfycbxrwcJScyk9igmPU4Qz3qqWGhqJ0ZCFKIq-tD2ShgsWxi_9YyybaS4l_rkd7fPF-OvvUA/exec">
 
                             <div class="messages"></div>
                         
@@ -863,6 +863,32 @@
                         
                             </div>
                         </form>
+                        <script>
+                            document.getElementById("web-development-form").addEventListener("submit", function(e) {
+                                e.preventDefault(); // Prevent default form submission
+                            
+                                // Collect form data
+                                const form = e.target;
+                                const formData = new FormData(form);
+                            
+                                // Submit form data to Google Apps Script
+                                fetch(form.action, {
+                                    method: "POST",
+                                    body: formData
+                                })
+                                .then(response => response.text())
+                                .then(text => {
+                                    // Show a success message
+                                    alert("Your submission was successful! Thank you.");
+                                    form.reset(); // Reset the form
+                                })
+                                .catch(error => {
+                                    console.error("Error!", error);
+                                    alert("There was an error submitting your form. Please try again.");
+                                });
+                            }
+                        );
+                            </script>                            
                     </div>
                 </div>
             </div>
